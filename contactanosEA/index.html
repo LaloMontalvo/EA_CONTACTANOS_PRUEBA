@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Espacio Arquitectura Estudio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="contacto.css"> <!-- Enlace al CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="LogoFavicon.png">
+</head>
+<body>
+
+<!-- Menú de navegación -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="LogoAmarillo-Photoroom.png" class="logo logo-transparent" alt="Logo Blanco">
+            <img src="Logo.png" class="logo logo-scrolled" alt="Logo Negro">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="/SobreNosotros.html">Sobre Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="/galeria.html">Galería</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Contáctanos</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Imagen de presentación -->
+<header class="hero">
+    <img src="images/Contacto/Presentation-image.jpg" alt="Imagen de presentación">
+    <h1 class="hero-title">Contáctanos</h1>
+</header>
+
+
+<!-- Contenido de la página -->
+<main class="content">
+    <section id="sobre-nosotros" class="seccion">
+        <h2 class="titulo scroll-effect">¡Envianos un mensaje!</h2>
+    </section>
+
+    <section id="contacto">
+        <div class="contacto-texto">
+            <p>Inspírate con nosotros <br>
+                ¿Tienes un proyecto en mente? Estamos aquí para ayudarte. Completa el formulario y nos pondremos en contacto contigo pronto. <br>
+                ¡Hagamos realidad tus ideas!</p>
+            
+                <form id="contacto-form" class="formulario">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                  
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                  
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+                  
+                    <button type="submit" class="btn">Enviar</button>
+                  </form>
+                  <div id="errores" style="color: red; margin-top: 10px;"></div>
+                  
+                
+                
+        </div>
+        <br>
+    
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2935.7617131321877!2d-96.72618579060399!3d18.81337606009368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c48d7817255d03%3A0x21dda38ae0763f1!2sEspacio%20Arquitectura%20Estudio%20S.A.%20de%20C.V.!5e1!3m2!1ses-419!2smx!4v1739085896481!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+            <a href="https://maps.app.goo.gl/td7jSjdDt7QSHcn59" target="_blank" class="btn-mapa">Llegar</a>
+        </div>
+    </section>
+    
+    
+</main>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Sección "Sobre Nosotros" -->
+            <div class="col-md-4 footer-section">
+                <h5>Sobre Nosotros</h5>
+                <p>Somos un estudio de arquitectura comprometido con la excelencia en diseño y construcción.</p>
+            </div>
+
+            <!-- Sección "Nuestras Redes Sociales" -->
+            <div class="col-md-4 footer-section text-center">
+                <h5>Nuestras redes sociales</h5>
+                <a href="https://www.facebook.com/profile.php?id=61572201055878" target="_blank" class="social-icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </div>
+
+            <!-- Sección "Ubicación y Teléfono" -->
+            <div class="col-md-4 footer-section text-end">
+                <h5>Ubicación</h5>
+                <p><i class="fa-solid fa-location-dot icon"></i> Cuitláhuac, Veracruz , México</p>
+                <p><i class="fa-solid fa-phone icon"></i> +52 271 732 5912</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Cargar EmailJS -->
+<script type="module" src="contacto.js"></script>
+
+</body>
+</html>

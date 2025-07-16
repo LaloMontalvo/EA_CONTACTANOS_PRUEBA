@@ -1,0 +1,507 @@
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del menú de navegación */
+.navbar {
+    transition: background-color 0.4 ease-in-out, padding 0.3s ease-in-out;
+    padding: 0px 0;
+}
+
+/* Ajuste del padding para hacer la barra más delgada */
+.navbar {
+    padding: 1px; /* Reducido de 20px a 12px */
+}
+
+/* Cuando se hace scroll, se mantiene más delgada */
+.navbar.scrolled {
+    padding: 5px 0; /* Reducido para que se vea más compacta */
+}
+
+
+/* Transición suave para el menú */
+.navbar {
+    transition: background-color 0.5s ease-in-out, padding 0.3s ease-in-out;
+}
+
+/* Transición suave para los enlaces */
+.navbar .nav-link {
+    transition: color 0.3s ease-in-out;
+}
+
+/* Transición de la línea activa */
+.navbar-nav .nav-link.active::after {
+    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Efecto de deslizamiento en el menú al hacer scroll */
+.navbar.scrolled {
+    animation: fadeInDown 0.5s ease-in-out;
+}
+
+/* Animación de deslizamiento */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Menú transparente (inicial) */
+.navbar.transparent {
+    background-color: transparent !important;
+    border: none;
+}
+
+
+/* Menú cuando se hace scroll */
+.navbar.scrolled {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white !important;
+    padding: 0px 0;
+    border-bottom: 2px solid black;
+}
+
+/* Color del texto en modo transparente */
+.navbar.transparent .nav-link,
+.navbar.transparent .navbar-brand {
+    color: white !important;
+}
+
+/* Color del texto cuando se hace scroll */
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand {
+    color: black !important;
+}
+
+/* Estilos base del logo */
+.logo {
+    transition: opacity 0.4s ease-in-out, height 0.4s ease-in-out;
+}
+
+/* Logo cuando la barra es transparente */
+.logo-transparent {
+    display: block;
+    height: 70px; /* Tamaño grande en modo transparente */
+}
+
+/* Logo cuando la barra cambia de color */
+.logo-scrolled {
+    display: none;
+    height: 110px; /* Tamaño más pequeño al hacer scroll */
+}
+
+/* Cuando el menú cambia al hacer scroll */
+.navbar.scrolled .logo-transparent {
+    display: none;
+}
+
+.navbar.scrolled .logo-scrolled {
+    display: block;
+}
+
+/* 🔹 Ajustes responsivos */
+@media (max-width: 768px) {
+    .logo-transparent {
+        height: 60px; /* Reducimos tamaño en móviles */
+    }
+    .logo-scrolled {
+        height: 90px; /* Más pequeño en móviles */
+    }
+}
+
+
+/* Imagen de presentación */
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Imagen con tamaño completo */
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Capa oscura sobre la imagen */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Oscurece la imagen */
+}
+
+/* Estilos del título */
+.hero-title {
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 2;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+/* Tamaño por defecto para pantallas grandes */
+h1, h2 {
+    font-size: 2.5rem; /* Tamaño base */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1200px) {
+    h1, h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    h1, h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Alineación de los párrafos a la izquierda y responsivo */
+.seccion p {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 900px; /* Ajusta el ancho máximo */
+    width: 100%; /* Permite que se ajuste al 100% en pantallas pequeñas */
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .seccion p {
+        max-width: 100%; /* Se ajusta al 100% en pantallas más pequeñas */
+    }
+}
+
+
+/* Ajuste de padding lateral */
+.content {
+    width: 100%;  /* Ocupa todo el ancho disponible */
+    max-width: 1200px; /* Define un ancho máximo en pantallas grandes */
+    padding: 0 5%; /* Reduce el espacio lateral entre el texto y los bordes */
+    margin: 0 auto; /* Centra el contenido */
+}
+
+/* Ajuste para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .content {
+        padding: 0 3%; /* Aún menos padding en pantallas pequeñas */
+    }
+}
+
+/* Estilos generales */
+.seccion {
+    text-align: center;
+    padding: 40px 10px;
+}
+
+
+.titulo {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+
+/* Sección de Contacto */
+#contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Lado izquierdo: Información y Formulario */
+.contacto-texto {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    padding-right: 9px;
+}
+
+/* Estilos del título */
+.contacto-texto .titulo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Párrafo informativo */
+.contacto-texto p {
+    font-size: 1.2rem;
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos del formulario */
+.formulario {
+    width: 100%;
+}
+
+.formulario label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #444;
+}
+
+.formulario input, 
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.formulario textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Estilo del botón Enviar */
+.formulario .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+.formulario .btn:hover {
+    background-color: #bb9a15;
+}
+
+/* Lado derecho: Mapa y Botón Llegar */
+.mapa {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Estilo del mapa */
+.mapa iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* Botón "Llegar" */
+.mapa .btn-mapa {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color:  #ffcc00;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.mapa .btn-mapa:hover {
+    background-color: #bb9a15;
+}
+
+/* 🔹 Responsividad */
+@media (max-width: 992px) {
+    #contacto {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contacto-texto, .mapa {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .contacto-texto .titulo,
+    .contacto-texto {
+        text-align: center;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+}
+
+
+
+
+/* Estilos para los enlaces del menú */
+.navbar-nav .nav-link {
+    position: relative;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Color al pasar el mouse */
+.navbar-nav .nav-link:hover {
+    color: #ffcc00 !important; /* Cambia a amarillo */
+}
+
+/* Línea activa debajo de la sección actual */
+.navbar-nav .nav-link {
+    position: relative;
+    padding-bottom: 5px; /* Espacio para la línea */
+}
+
+/* Línea activa en pantallas grandes */
+.navbar-nav .nav-link.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #ffcc00; /* Línea amarilla */
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+/* Línea más corta en dispositivos pequeños */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link.active::after {
+        width: 40%; /* Más corta en pantallas pequeñas */
+        height: 2px; /* Un poco más delgada */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos del Footer */
+.footer {
+    background-color: #222; /* Color oscuro */
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-section h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Iconos de redes sociales */
+.social-icon i {
+    font-size: 35px;
+    color: white;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.social-icon i:hover {
+    transform: scale(1.1);
+    color: #ffcc00; /* Cambia a amarillo al pasar el mouse */
+}
+
+/* Iconos de ubicación y teléfono */
+.icon {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+/* Responsive: centrar elementos en móviles */
+@media (max-width: 768px) {
+    .footer-section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .footer-section.text-end {
+        text-align: center !important;
+    }
+}
+
+
+/* Icono hamburguesa blanco en modo transparente */
+.navbar.transparent .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Icono hamburguesa negro cuando se hace scroll */
+.navbar.scrolled .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
